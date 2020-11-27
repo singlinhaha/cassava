@@ -1,0 +1,33 @@
+cfg = {
+    "fold": 1,
+    "train_percent": 0.9,
+    "dataset": "/media/biototem/Elements/lisen/haosen/competition/dataset/cassava/train_images",
+    "model_name": "densenet121",
+    "label": {"label_path": "/media/biototem/Elements/lisen/haosen/competition/dataset/cassava/train.csv",
+              "classes_path": "/media/biototem/Elements/lisen/haosen/competition/dataset/cassava/label_num_to_disease_map.json"},
+    "train_dataset": None,
+    "train_select": None,
+    "val_dataset": None,
+    "val_select": None,
+    "model_weight_path": "/media/biototem/Elements/lisen/haosen/competition/dataset/densenet121-a639ec97.pth",
+    "accumulate": 1,
+    "batch_size": 64,
+    "img_width": 224,
+    "img_hight": 224,
+    "num_classes": 5,
+    "lr": 1e-3,
+    "tl_lr": 1e-4,
+    "ft_lr": 1e-4,
+    "nepochs": 30,
+    "output_dir": "output/exp",
+    "average": "micro",
+
+    # prediction
+    "test_dataset": "/media/biototem/Elements/lisen/haosen/competition/dataset/cassava/test_images",
+    "test_label": {"label_path": "/media/biototem/Elements/lisen/haosen/competition/dataset/cassava/train.csv",
+                    "classes_path": "/media/biototem/Elements/lisen/haosen/competition/dataset/cassava/label_num_to_disease_map.json"},
+    "select_file": "/media/biototem/Elements/lisen/haosen/competition/cassava/output/exp/dataset_0.9-split_train_val.pkl",
+    "phase": "test",
+    "model_weights": ["/media/biototem/Elements/lisen/haosen/competition/cassava/output/exp/weights/2020_11_24_epoch_17-model_weights.pth"],
+    "save_dir": "/media/biototem/Elements/lisen/haosen/competition/cassava/output/exp"
+}
